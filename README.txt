@@ -25,6 +25,8 @@ In the portfolio post section you can attach only one custom gallary using the n
 	[gallery ids="41,42,43,44,45"]
 [/div]
 
+Here is a demo link for this plugin: <a href="http://www.itechflare.com/main/demo/"><b>DEMO</b></a>
+
 Enjoy! And don't forget to rate, and ask for support if you have faced any troubles.
 
 Peace! 
