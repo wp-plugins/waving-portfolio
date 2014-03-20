@@ -188,7 +188,7 @@ function Building_Portfolio_List($cols,$fx)
                 
                 $list = '<li>
                         <a class="md-trigger" data-modal="modal-'.$i.'">
-                                <img src="'.$image[0].'" width="250" height="250" />
+                                <img src="'.$image[0].'" width="250" />
                                 <div style="display: block; left: 100%; top: 0px; overflow: hidden; -webkit-transition: all 300ms ease; transition: all 300ms ease;"><span>'.get_the_title().'</span></div>
                         </a>
                 </li>';

@@ -118,6 +118,7 @@ perspective effects (not including the modals and the overlay).
 	text-align: center;
 	font-size: 2.4em !important;
 	font-weight: 300 !important;
+	font-family:Lato, sans-serif !important;
 	opacity: 0.8 !important;
 	background: rgba(0,0,0,0.1);
 	border-radius: 3px 3px 0 0;
@@ -142,6 +143,13 @@ perspective effects (not including the modals and the overlay).
 
 .md-content > div ul li {
 	padding: 5px 0;
+	background: none !important;
+	list-style:circle;
+}
+
+ul li
+{
+	background:none;
 }
 
 .md-content button {
