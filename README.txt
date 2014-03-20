@@ -75,7 +75,8 @@ In the post section you can attach custom gallaries using the native wordpress m
 1. A portfolio page with four portfolios listed.
 2. A swift modal window that includes description and gallary images will come-in fast once you click over any portfolio section.
 3. Lightbox will be displayed as shown when you click over a gallary picture for any specific portfolio.
-4. Waving Portfolio plugin logo.
+4. Backend management panel.
+5. Waving Portfolio plugin logo.
 
 == Changelog ==
 
