@@ -14,12 +14,14 @@ This is a free plugin that gives the website owners the capability to elegantly 
 
 This is a free modern plugin with very easy control and display flow that gives website owners the capability to professionally & elegantly promote & represent their long job achievements in a unified good looking portfolio grid.
 
+First, all you have to do is adding as much portfolio posts as you want in the new dashboard admin menu "Portfolio" along with giving a good looking featured image to each post, so it can be presented inside the portfolio grid as per your taste.
+
 For placing your portfolio grid anywhere in your website, just use the following shortcode and you are done:
 [waving cols="x" /]
 
 Where cols is the number of columns you want your grid to use.
 
-In the portfolio post section you can attach only one custom gallary using the native wordpress media window, and once you add the shortcode of the gallary, make sure to place it inside a hidden div so it doesn't show inside the portfolio content as follow:
+In the portfolio post section you can attach only one custom gallary that can consist of infinite number of images using the native wordpress media window, and once you add the shortcode of the gallary, make sure to place it inside a hidden div so it doesn't show inside the portfolio content as follow:
 
 [div style="display: none;"]
 	[gallery ids="41,42,43,44,45"]

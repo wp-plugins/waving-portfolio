@@ -176,9 +176,7 @@ function Building_Portfolio_List($cols,$fx)
                 $modal = '<div class="md-modal md-effect-12" id="modal-'.$i.'">
 			<div class="md-content">
 				<h3>'.  get_the_title().'</h3>
-				<div class="modal-left">
-					<p>'.get_the_content().'</p>
-				</div>
+				<div class="modal-left">'.get_the_content().'</div>
                                 <div class="modal-right">
                                 '.$gallary.'<br/><br/>
                                     <button class="md-close">Close me!</button>
