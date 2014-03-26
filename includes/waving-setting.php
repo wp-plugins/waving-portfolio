@@ -13,7 +13,7 @@
  * Plugin Name: Waving Portfolio
  * Plugin URI:  http://www.itechflare.com/
  * Description: Enables a portfolio post type and taxonomies.
- * Version:     1.0.1
+ * Version:     1.0.2
  * Author:      Abdulrhman Elbuni
  * Author URI:  http://www.itechflare.com/
  * Text Domain: portfolioposttype
