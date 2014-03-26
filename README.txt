@@ -4,7 +4,7 @@ Donate link: http://www.itechflare.com/donate.php
 Tags: portfolio, plugin, promote, nice, job
 Requires at least: 3.5.1
 Tested up to: 3.6
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -86,12 +86,16 @@ In the post section you can attach custom gallaries using the native wordpress m
 * Implement a portfolio custom management posts, so the user can add their items easily
 * Add modal effects for each portfolio
 * Added gallary support feature that could be nested inside portfolios as described in FAQ
+
+= 1.0.2 =
+
 * Fixing the portfolio grid layout, and make it as inline-block which will adapt automatically inside of the wrapper corresponding to the wrappers width.
 * Adding width attribute to the shortcode, so users can change the width according to their needs.
 
 == Upgrade Notice ==
 
-= 1.0.1 =
+= 1.0.2 =
+This version fixes a grid styling problem.
 
 == Arbitrary section ==
 
