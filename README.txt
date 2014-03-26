@@ -17,9 +17,9 @@ This is a free modern plugin with very easy control and display flow that gives 
 First, all you have to do is adding as much portfolio posts as you want in the new dashboard admin menu "Portfolio" along with giving a good looking featured image to each post, so it can be presented inside the portfolio grid as per your taste.
 
 For placing your portfolio grid anywhere in your website, just use the following shortcode and you are done:
-[waving cols="x" /]
+[waving width="xxx" /]
 
-Where cols is the number of columns you want your grid to use.
+Where width is controlling each portfolio picture width for the whole grid elements, by default it will be set to 250px.
 
 In the portfolio post section you can attach only one custom gallary that can consist of infinite number of images using the native wordpress media window, and once you add the shortcode of the gallary, make sure to place it inside a hidden div so it doesn't show inside the portfolio content as follow:
 
@@ -86,6 +86,8 @@ In the post section you can attach custom gallaries using the native wordpress m
 * Implement a portfolio custom management posts, so the user can add their items easily
 * Add modal effects for each portfolio
 * Added gallary support feature that could be nested inside portfolios as described in FAQ
+* Fixing the portfolio grid layout, and make it as inline-block which will adapt automatically inside of the wrapper corresponding to the wrappers width.
+* Adding width attribute to the shortcode, so users can change the width according to their needs.
 
 == Upgrade Notice ==
 

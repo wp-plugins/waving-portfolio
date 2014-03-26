@@ -29,7 +29,8 @@ if ( ! defined( 'WPINC' ) ) {
 // Required files for registering the post type and taxonomies.
 require plugin_dir_path( __FILE__ ) . 'includes/waving-portfolio-type.php';
 require plugin_dir_path( __FILE__ ) . 'includes/class-portfolio-post-type-registrations.php';
-require plugin_dir_path( __FILE__ ) . 'includes/waving-controller.php';
+// Disabling setting page for the time being
+// require plugin_dir_path( __FILE__ ) . 'includes/waving-setting.php';
 
 // Instantiate registration class, so we can add it as a dependency to main plugin class.
 $portfolio_post_type_registrations = new Portfolio_Post_Type_Registrations;
@@ -79,10 +80,10 @@ if ( is_admin() ) {
 function waving_func( $atts ) {
         extract( shortcode_atts( array(
                 'effect' => 12,
-                'cols' => 3), 
+                'width' => 250), 
                 $atts ) );
 
-        echo Building_Portfolio_List($cols,$fx);
+        echo Building_Portfolio_List($width,$fx);
 }
 
 add_shortcode( 'waving', 'waving_func');
@@ -139,13 +140,12 @@ function my_scripts_method() {
 
 }
 
-function Building_Portfolio_List($cols,$fx)
+function Building_Portfolio_List($width,$fx)
 {
-    $listHeader = '<section><ul id="da-thumbs" class="da-thumbs" style="columns:'.$cols.';-webkit-columns:'.$cols.';-moz-columns:'.$cols.';">';
+    $listHeader = '<section><ul id="da-thumbs" class="da-thumbs">';
     $listFooter = '</ul></section>';
     $lists = array();
     $modals = array();
-    $gallarys = array();
     
     $i = 1;
         
@@ -186,7 +186,7 @@ function Building_Portfolio_List($cols,$fx)
                 
                 $list = '<li>
                         <a class="md-trigger" data-modal="modal-'.$i.'">
-                                <img src="'.$image[0].'" width="250" />
+                                <img src="'.$image[0].'" width="'.$width.'" />
                                 <div style="display: block; left: 100%; top: 0px; overflow: hidden; -webkit-transition: all 300ms ease; transition: all 300ms ease;"><span>'.get_the_title().'</span></div>
                         </a>
                 </li>';

@@ -1,17 +1,13 @@
 .da-thumbs {
 	list-style: none;
-	width: 1200px;
-	height: 600px;
-	position: relative;
 	margin: 20px auto;
 	padding: 0;
 }
 .da-thumbs li {
-	float: left;
 	margin: 5px;
 	background: #fff;
 	padding: 8px;
-	position: relative;
+        display:inline-block;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         background: none !important;
 }
