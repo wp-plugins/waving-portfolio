@@ -73,6 +73,16 @@ In the post section you can attach custom gallaries using the native wordpress m
 	[gallery ids="41,42,43,44,45"]
 </div>
 
+= How I can change the theme style ? =
+
+There is 2 pre-defined themes that can be used starting from 1.0.3 release, you can either use "dark" or "light" style.
+
+To apply your style just add attribute theme in your shortcode ass follow:
+
+[waving width="200" theme="[light|dark]" /]
+
+Notice: By the default the dark theme is enabled.
+
 == Screenshots ==
 
 1. A portfolio page with four portfolios listed.
