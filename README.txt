@@ -3,8 +3,8 @@ Contributors: aelbuni
 Donate link: http://www.itechflare.com/donate.php
 Tags: portfolio, plugin, promote, nice, job
 Requires at least: 3.5.1
-Tested up to: 3.6
-Stable tag: 1.0.2
+Tested up to: 3.9.1
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,9 +17,10 @@ This is a free modern plugin with very easy control and display flow that gives 
 First, all you have to do is adding as much portfolio posts as you want in the new dashboard admin menu "Portfolio" along with giving a good looking featured image to each post, so it can be presented inside the portfolio grid as per your taste.
 
 For placing your portfolio grid anywhere in your website, just use the following shortcode and you are done:
-[waving width="xxx" /]
+[waving width="xxx" theme="[light|dark]" /]
 
 Where width is controlling each portfolio picture width for the whole grid elements, by default it will be set to 250px.
+And with theme attribute you can define your theme to either be light or dark.
 
 In the portfolio post section you can attach only one custom gallary that can consist of infinite number of images using the native wordpress media window, and once you add the shortcode of the gallary, make sure to place it inside a hidden div so it doesn't show inside the portfolio content as follow:
 
@@ -92,10 +93,20 @@ In the post section you can attach custom gallaries using the native wordpress m
 * Fixing the portfolio grid layout, and make it as inline-block which will adapt automatically inside of the wrapper corresponding to the wrappers width.
 * Adding width attribute to the shortcode, so users can change the width according to their needs.
 
+= 1.0.3 =
+
+* Adding light and dark theme styles, that used can dynamically define inside the shortcode.
+* Convert the plugin to be totally responsive, working on (iPhone, Android and iPad).
+
 == Upgrade Notice ==
 
 = 1.0.2 =
 This version fixes a grid styling problem.
+
+= 1.0.3 =
+- This version has responsive capability.
+- New theme has been added to the plugin.
+
 
 == Arbitrary section ==
 
