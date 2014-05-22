@@ -17,8 +17,10 @@ This is a free contemporary responsive plugin with very easy control and display
 First, all you have to do is adding as much portfolio posts as you want in the new dashboard admin menu "Portfolio" along with giving a good looking featured image to each post, so it can be presented inside the portfolio grid as per your taste.
 
 For placing your portfolio grid anywhere in your website, just use the following shortcode and you are done:
+
 [waving width="xxx" theme="[light|dark]" /]
-example: [waving width="200" theme="light" /]
+
+Example: [waving width="200" theme="light" /]
 
 Where width is controlling each portfolio picture width for the whole grid elements, by default it will be set to 250px.
 And with theme attribute you can define your theme to either be light or dark.
