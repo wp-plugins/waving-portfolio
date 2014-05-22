@@ -4,7 +4,7 @@ Donate link: http://www.itechflare.com/donate.php
 Tags: portfolio, plugin, promote, nice, job, illustrate
 Requires at least: 3.5.1
 Tested up to: 3.9.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -108,6 +108,11 @@ Notice: By the default the dark theme is enabled.
 * Adding light and dark theme styles, that used can dynamically define inside the shortcode.
 * Convert the plugin to be totally responsive, working on (iPhone, Android and iPad).
 
+= 1.0.4 =
+
+* Dim background
+* Fix unlimited post issue
+
 == Upgrade Notice ==
 
 = 1.0.2 =
@@ -116,6 +121,11 @@ This version fixes a grid styling problem.
 = 1.0.3 =
 - This version has responsive capability.
 - New theme has been added to the plugin.
+
+= 1.0.4 =
+
+* Dim background
+* Fix unlimited post issue
 
 == Arbitrary section ==
 

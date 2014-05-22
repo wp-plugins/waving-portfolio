@@ -21,7 +21,7 @@ var ModalEffects = (function() {
 
 			function removeModal( hasPerspective ) {
 				classie.remove( modal, 'md-show' );
-
+				
 				if( hasPerspective ) {
 					classie.remove( document.documentElement, 'md-perspective' );
 				}
@@ -32,6 +32,9 @@ var ModalEffects = (function() {
 			}
 
 			el.addEventListener( 'click', function( ev ) {
+				// Dim backgrounf
+				jQuery("#waving-dim").fadeIn();
+				
 				classie.add( modal, 'md-show' );
 				overlay.removeEventListener( 'click', removeModalHandler );
 				overlay.addEventListener( 'click', removeModalHandler );
@@ -44,6 +47,8 @@ var ModalEffects = (function() {
 			});
 
 			close.addEventListener( 'click', function( ev ) {
+				jQuery("#waving-dim").fadeOut();
+
 				ev.stopPropagation();
 				removeModalHandler();
 			});
