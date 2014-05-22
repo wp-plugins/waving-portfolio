@@ -8,11 +8,11 @@ Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This is a free plugin that gives the website owners the capability to elegantly represent their long job achievements in a unified portfolio grid.
+This is a free responsive plugin that gives the website owners the capability to elegantly represent their long job achievements in a unified portfolio grid.
 
 == Description ==
 
-This is a free modern plugin with very easy control and display flow that gives website owners the capability to professionally & elegantly promote & represent their long job achievements in a unified good looking portfolio grid.
+This is a free contemporary responsive plugin with very easy control and display flow that gives website owners the capability to professionally & elegantly promote & represent their long job achievements in a unified good looking portfolio grid.
 
 First, all you have to do is adding as much portfolio posts as you want in the new dashboard admin menu "Portfolio" along with giving a good looking featured image to each post, so it can be presented inside the portfolio grid as per your taste.
 
