@@ -12,7 +12,7 @@
  * Plugin Name: Waving Portfolio
  * Plugin URI:  http://www.itechflare.com/
  * Description: Free plugin with very slick design to professionally promote & present your job portfolio.
- * Version:     1.0.2
+ * Version:     1.0.3
  * Author:      Abdulrhman Elbuni
  * Author URI:  http://www.itechflare.com/
  * Text Domain: portfolioposttype
