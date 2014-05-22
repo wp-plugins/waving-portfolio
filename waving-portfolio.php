@@ -12,7 +12,7 @@
  * Plugin Name: Waving Portfolio
  * Plugin URI:  http://www.itechflare.com/
  * Description: Free plugin with very slick design to professionally promote & present your job portfolio.
- * Version:     1.0.2
+ * Version:     1.0.3
  * Author:      Abdulrhman Elbuni
  * Author URI:  http://www.itechflare.com/
  * Text Domain: portfolioposttype
@@ -80,10 +80,11 @@ if ( is_admin() ) {
 function waving_func( $atts ) {
         extract( shortcode_atts( array(
                 'effect' => 12,
-                'width' => 250), 
+                'width' => 250,
+				'theme'=> 'dark'), 
                 $atts ) );
 
-        echo Building_Portfolio_List($width,$fx);
+        echo Building_Portfolio_List($width,$effect,$theme);
 }
 
 add_shortcode( 'waving', 'waving_func');
@@ -140,7 +141,7 @@ function my_scripts_method() {
 
 }
 
-function Building_Portfolio_List($width,$fx)
+function Building_Portfolio_List($width,$fx, $theme)
 {
     $listHeader = '<section><ul id="da-thumbs" class="da-thumbs">';
     $listFooter = '</ul></section>';
@@ -155,6 +156,14 @@ function Building_Portfolio_List($width,$fx)
     'post_type' => $type,
     'post_status' => 'publish');
 
+	if($theme == 'light')
+	{
+		wp_enqueue_style( 'modal-light-theme',
+                plugins_url( 'assets/css/light.css' , __FILE__ ));
+				
+		echo 'we are here';
+	}
+	
     $my_query = null;
     $my_query = new WP_Query($args);
     if( $my_query->have_posts() ) {
@@ -177,10 +186,10 @@ function Building_Portfolio_List($width,$fx)
 			<div class="md-content">
 				<h3>'.  get_the_title().'</h3>
 				<div class="modal-left">'.get_the_content().'</div>
-                                <div class="modal-right">
-                                '.$gallary.'<br/><br/>
-                                    <button class="md-close">Close me!</button>
-                                </div>
+				<div class="modal-right">
+				'.$gallary.'<br/><br/>
+					<button class="md-close">Close me!</button>
+				</div>
 			</div>
 		</div>';
                 

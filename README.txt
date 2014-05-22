@@ -1,7 +1,7 @@
 === Waving Portfolio ===
 Contributors: aelbuni
 Donate link: http://www.itechflare.com/donate.php
-Tags: portfolio, plugin, promote, nice, job
+Tags: portfolio, plugin, promote, nice, job, illustrate
 Requires at least: 3.5.1
 Tested up to: 3.9.1
 Stable tag: 1.0.3
@@ -116,7 +116,6 @@ This version fixes a grid styling problem.
 = 1.0.3 =
 - This version has responsive capability.
 - New theme has been added to the plugin.
-
 
 == Arbitrary section ==
 

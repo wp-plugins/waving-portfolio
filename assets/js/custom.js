@@ -33,5 +33,6 @@ jQuery(document).ready(function(){
         disableNavbarLinks: true
     });
 
-
+	// Center the parent div of the portfolio lists
+	jQuery("#da-thumbs").parent().css("text-align","center");
 });
