@@ -160,8 +160,6 @@ function Building_Portfolio_List($width,$fx, $theme)
 	{
 		wp_enqueue_style( 'modal-light-theme',
                 plugins_url( 'assets/css/light.css' , __FILE__ ));
-				
-		echo 'we are here';
 	}
 	
     $my_query = null;
