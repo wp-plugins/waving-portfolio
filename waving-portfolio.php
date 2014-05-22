@@ -154,7 +154,9 @@ function Building_Portfolio_List($width,$fx, $theme)
     $type = 'portfolio';
     $args=array(
     'post_type' => $type,
-    'post_status' => 'publish');
+    'post_status' => 'publish',
+	'posts_per_page' => -1, 
+	'cache_results' => false);
 
 	if($theme == 'light')
 	{
