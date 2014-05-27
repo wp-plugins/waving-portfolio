@@ -18,14 +18,13 @@ First, all you have to do is adding as much portfolio posts as you want in the n
 
 For placing your portfolio grid anywhere in your website, just use the following shortcode and you are done:
 
-[waving width="xxx" theme="[light|dark]" all="[0|1]" /]
-
-Example: [waving width="200" theme="light" all="0" /]
+*[waving width="xxx" theme="[light|dark]" all="[0|1]" /]
+*Example: [waving width="200" theme="light" all="0" /]
 
 Where:
-Width attribute: Is controlling each portfolio item width for the whole grid elements, by default it will be set to 250px.
-Theme attribute: With this you can define your theme to be either light or dark.
-All attribute: With this attribute you can disable "all" category from showing-up in Portfolio Category menu.
+*Width attribute: Is controlling each portfolio item width for the whole grid elements, by default it will be set to 250px.
+*Theme attribute: With this you can define your theme to be either light or dark.
+*All attribute: With this attribute you can disable "all" category from showing-up in Portfolio Category menu.
 
 In the portfolio post section you can attach only one custom gallary that can consist of infinite number of images using the native wordpress media window, and once you add the shortcode of the gallary, make sure to place it inside a hidden div so it doesn't show inside the portfolio content as follow:
 
