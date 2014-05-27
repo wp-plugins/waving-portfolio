@@ -209,4 +209,22 @@ background-color:rgba(0,0,0,0.7);
 display:none; 
 text-align:left; 
 }
-				
+
+/* Portfolio menu style */
+button.waving-button{
+		height: 26px; 
+  line-height: 26px; 
+  padding: 1px 12px 0px 12px; 
+  display: inline-block; 
+		color:black;
+  background-color:#A7A7A7; 
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px; 
+  margin-left: 3px;
+}
+
+	button.waving-button:hover{
+		background-color:rgb(201, 201, 201); 
+  color:gray;
+	}

@@ -12,7 +12,7 @@
  * Plugin Name: Waving Portfolio
  * Plugin URI:  http://www.itechflare.com/
  * Description: Free plugin with very slick design to professionally promote & present your job portfolio.
- * Version:     1.0.4
+ * Version:     1.0.5
  * Author:      Abdulrhman Elbuni
  * Author URI:  http://www.itechflare.com/
  * Text Domain: portfolioposttype
@@ -81,10 +81,10 @@ function waving_func( $atts ) {
         extract( shortcode_atts( array(
                 'effect' => 12,
                 'width' => 250,
-				'theme'=> 'dark'), 
+                'theme'=> 'dark', 
+                'all' => '1'),
                 $atts ) );
-
-        echo Building_Portfolio_List($width,$effect,$theme);
+        echo Building_Portfolio_List($width,$effect,$theme, $all);
 }
 
 add_shortcode( 'waving', 'waving_func');
@@ -93,12 +93,12 @@ add_shortcode( 'waving', 'waving_func');
 
 function my_scripts_method() {
     
-        $params = array(
-            'loadingImageSrc' => plugins_url( 'assets/images/loading.gif' , __FILE__ ),
-            'closeImageSrc' => plugins_url( 'assets/images/closelabel.gif' , __FILE__ ),
-            );
-    
-        // Loading waving hover effect scripts
+  $params = array(
+      'loadingImageSrc' => plugins_url( 'assets/images/loading.gif' , __FILE__ ),
+      'closeImageSrc' => plugins_url( 'assets/images/closelabel.gif' , __FILE__ ),
+      );
+  
+  // Loading waving hover effect scripts
 	wp_enqueue_script(
 		'waving-hover-script',
 		plugins_url( 'assets/js/jquery.hoverdir.js' , __FILE__ ),
@@ -141,12 +141,13 @@ function my_scripts_method() {
 
 }
 
-function Building_Portfolio_List($width,$fx, $theme)
+function Building_Portfolio_List($width,$fx, $theme, $all)
 {
     $listHeader = '<section><ul id="da-thumbs" class="da-thumbs">';
     $listFooter = '</ul></section>';
     $lists = array();
     $modals = array();
+    $paramCustom = array();
     
     $i = 1;
         
@@ -163,7 +164,31 @@ function Building_Portfolio_List($width,$fx, $theme)
 		wp_enqueue_style( 'modal-light-theme',
                 plugins_url( 'assets/css/light.css' , __FILE__ ));
 	}
-	
+
+ // print out categories
+  $taxonomy = "portfolio_category";
+  $tax_terms = get_terms($taxonomy);
+
+  if(count($tax_terms)!=0){
+    $paramCustom = array("all" => $all,
+      "initialClass"=>$tax_terms[0]->slug);
+  }else{
+    $paramCustom = array("all" => "1",
+      "initialClass"=>"0");
+  }
+  
+  if($all == "1" && count($tax_terms)!=0)
+  {
+    echo '<button class="waving-button" onClick="ShowLists(\'all\')">All</button>';
+  }
+  
+  if(count($tax_terms)!=0){
+    foreach($tax_terms as $term)
+    {
+      echo '<button class="waving-button" onClick="ShowLists(\''.$term->slug.'\')">'.$term->name.'</button>';
+    }
+  }
+ 
     $my_query = null;
     $my_query = new WP_Query($args);
     if( $my_query->have_posts() ) {
@@ -192,8 +217,16 @@ function Building_Portfolio_List($width,$fx, $theme)
 				</div>
 			</div>
 		</div>';
+                $categories = get_the_terms( get_the_ID(),$taxonomy);
+                $cat_class = "";
+                if( $categories ){
+                  foreach($categories as $cat)
+                  {
+                    $cat_class = $cat_class. " waving-" . $cat->slug;
+                  }
+                }
                 
-                $list = '<li>
+                $list = '<li class="waving-item '.$cat_class.'">
                         <a class="md-trigger" data-modal="modal-'.$i.'">
                                 <img src="'.$image[0].'" width="'.$width.'" />
                                 <div style="display: block; left: 100%; top: 0px; overflow: hidden; -webkit-transition: all 300ms ease; transition: all 300ms ease;"><span>'.get_the_title().'</span></div>
@@ -208,6 +241,8 @@ function Building_Portfolio_List($width,$fx, $theme)
     wp_reset_query();
     
     $static = '<div class="md-overlay"></div><div id="waving-dim"></div>';
+    
+    wp_localize_script( 'my-custom-script', 'pluginSetting', $paramCustom );
     
     return implode("",$modals).''.$listHeader.''.implode("",$lists).''.$listFooter.''.$static;
 }

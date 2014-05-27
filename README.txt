@@ -4,7 +4,7 @@ Donate link: http://www.itechflare.com/donate.php
 Tags: portfolio, plugin, promote, nice, job, illustrate
 Requires at least: 3.5.1
 Tested up to: 3.9.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,12 +18,14 @@ First, all you have to do is adding as much portfolio posts as you want in the n
 
 For placing your portfolio grid anywhere in your website, just use the following shortcode and you are done:
 
-[waving width="xxx" theme="[light|dark]" /]
+[waving width="xxx" theme="[light|dark]" all="[0|1]" /]
 
-Example: [waving width="200" theme="light" /]
+Example: [waving width="200" theme="light" all="0" /]
 
-Where width is controlling each portfolio picture width for the whole grid elements, by default it will be set to 250px.
-And with theme attribute you can define your theme to either be light or dark.
+Where:
+Width attribute: Is controlling each portfolio item width for the whole grid elements, by default it will be set to 250px.
+Theme attribute: With this you can define your theme to be either light or dark.
+All attribute: With this attribute you can disable "all" category from showing-up in Portfolio Category menu.
 
 In the portfolio post section you can attach only one custom gallary that can consist of infinite number of images using the native wordpress media window, and once you add the shortcode of the gallary, make sure to place it inside a hidden div so it doesn't show inside the portfolio content as follow:
 
@@ -117,6 +119,10 @@ Notice: By the default the dark theme is enabled.
 * Dim background
 * Fix unlimited post issue
 
+= 1.0.5 =
+
+* Add category support for portfolio items, where you can tag portfolio with categories to be ordered later for your customers accordingly.
+
 == Upgrade Notice ==
 
 = 1.0.2 =
@@ -130,6 +136,10 @@ This version fixes a grid styling problem.
 
 * Dim background
 * Fix unlimited post issue
+
+= 1.0.5 =
+
+* Add category support for portfolio items, where you can tag portfolio with categories to be ordered later for your customers accordingly.
 
 == Arbitrary section ==
 

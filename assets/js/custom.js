@@ -2,6 +2,27 @@ jQuery(' #da-thumbs > li ').each( function() { jQuery(this).hoverdir(); } );
 
 // this is important for IEs
 var polyfilter_scriptpath = '/js/';
+var lastClass;
+
+if(pluginSetting.all == "0")
+{
+  ShowLists(pluginSetting.initialClass);
+}
+
+function ShowLists(listname)
+{
+  if(listname == "all")
+  {
+    jQuery('.waving-item').show("fast");
+  }
+  else if(listname != lastClass)
+  {
+    jQuery('.waving-item').hide();
+    jQuery('.waving-'+listname).show("slow");
+  }
+  
+  lastClass = listname;
+}
 
 // Initiate light box
 jQuery(document).ready(function(){
