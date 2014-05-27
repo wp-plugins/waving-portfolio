@@ -52,9 +52,9 @@ perspective effects (not including the modals and the overlay).
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
 	-webkit-transform: translateX(-50%) translateY(0);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-ms-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
 /* Let's get this party started */
