@@ -217,14 +217,15 @@ button.waving-button{
   padding: 1px 12px 0px 12px; 
   display: inline-block; 
 		color:black;
-  background-color:#A7A7A7; 
+  background-color:#DFDFDF; 
 		-webkit-border-radius: 3px;
 		-moz-border-radius: 3px;
 		border-radius: 3px; 
   margin-left: 3px;
+  margin-bottom: 6px;
 }
 
-	button.waving-button:hover{
-		background-color:rgb(201, 201, 201); 
-  color:gray;
-	}
+button.waving-button:hover{
+	background-color:#585858; 
+	color:white;
+}
