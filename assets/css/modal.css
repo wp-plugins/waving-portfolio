@@ -23,7 +23,7 @@ perspective effects (not including the modals and the overlay).
 	min-height: 100%;
 }
 
-.modal-content{
+.modal-waving-content{
     overflow-x: hidden;
     overflow-y: scroll;
     height:500px;
@@ -864,7 +864,7 @@ right: 8px;
 top: -25px;
 }
 
-.modal-content{
+.modal-waving-content{
     overflow-x: hidden;
     overflow-y: scroll;
     height:300px;
