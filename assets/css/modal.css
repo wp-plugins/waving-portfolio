@@ -23,19 +23,16 @@ perspective effects (not including the modals and the overlay).
 	min-height: 100%;
 }
 
-.modal-left{
-    width:60%;
+.modal-content{
     overflow-x: hidden;
     overflow-y: scroll;
-    height:600px;
-    float:left;
+    height:500px;
+    padding-right: 15px;
 }
 
-.modal-right
+.modal-gallary
 {
-    width:40%;
-    float:right;
-	text-align:center !important;
+    text-align:center !important;
 }
 
 .md-modal {
@@ -46,7 +43,7 @@ perspective effects (not including the modals and the overlay).
 	max-width: 800px;
 	min-width: 320px;
 	height: auto;
-	z-index: 2000;
+	z-index: 9999991;
 	visibility: hidden;
 	/* -webkit-backface-visibility: hidden; */
 	-moz-backface-visibility: hidden;
@@ -91,7 +88,7 @@ perspective effects (not including the modals and the overlay).
 	visibility: hidden;
 	top: 0;
 	left: 15%;
-	z-index: 1000;
+	z-index: 999999;
 	opacity: 0;
 	background: gray;
 	-webkit-transition: all 0.3s;
@@ -126,11 +123,9 @@ perspective effects (not including the modals and the overlay).
 }
 
 .md-content > div {
-	padding: 15px 40px 30px;
 	margin: 0;
 	font-weight: 300;
 	font-size: 1.15em;
-	text-align:justify;
 }
 
 .md-content > div p {
@@ -855,6 +850,25 @@ div.md-content h2 {
 	margin: 0;
 	font-weight: 300;
 	font-size: 0.9em;
+}
+
+div.waving-close {
+float: right;
+background-image: url('../images/close-button.png');
+height:46px;
+width:46px;
+margin: 0;
+cursor: pointer;
+position: relative;
+right: 8px;
+top: -25px;
+}
+
+.modal-content{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height:300px;
+    padding-right: 15px;
 }
 
 }

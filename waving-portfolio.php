@@ -12,7 +12,7 @@
  * Plugin Name: Waving Portfolio
  * Plugin URI:  http://www.itechflare.com/
  * Description: Free plugin with very slick design to professionally promote & present your job portfolio.
- * Version:     1.0.5
+ * Version:     1.0.6
  * Author:      Abdulrhman Elbuni
  * Author URI:  http://www.itechflare.com/
  * Text Domain: portfolioposttype
@@ -208,15 +208,16 @@ function Building_Portfolio_List($width,$fx, $theme, $all)
                 }
                 
                 $modal = '<div class="md-modal md-effect-12" id="modal-'.$i.'">
-			<div class="md-content">
-				<h3>'.  get_the_title().'</h3>
-				<div class="modal-left">'.get_the_content().'</div>
-				<div class="modal-right">
-				'.$gallary.'<br/><br/>
-					<button class="md-close">Close me!</button>
-				</div>
-			</div>
-		</div>';
+                  <div id="md-close" class="waving-close"></div>
+                  <div class="md-content">
+                    <h3>'.  get_the_title().'</h3>
+                      <div class="modal-gallary">
+                        '.$gallary.'<br/><br/>
+                      </div>
+                    <div class="modal-content">'.get_the_content().'</div>
+                  </div>
+                  </div>';
+                
                 $categories = get_the_terms( get_the_ID(),$taxonomy);
                 $cat_class = "";
                 if( $categories ){

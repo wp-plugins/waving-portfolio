@@ -17,7 +17,7 @@ var ModalEffects = (function() {
 		[].slice.call( document.querySelectorAll( '.md-trigger' ) ).forEach( function( el, i ) {
 
 			var modal = document.querySelector( '#' + el.getAttribute( 'data-modal' ) ),
-				close = modal.querySelector( '.md-close' );
+				close = modal.querySelector( '#md-close' );
 
 			function removeModal( hasPerspective ) {
 				classie.remove( modal, 'md-show' );
@@ -37,7 +37,10 @@ var ModalEffects = (function() {
 				
 				classie.add( modal, 'md-show' );
 				overlay.removeEventListener( 'click', removeModalHandler );
-				overlay.addEventListener( 'click', removeModalHandler );
+				overlay.addEventListener( 'click', function(mev){
+      removeModalHandler();
+      jQuery("#waving-dim").fadeOut();
+    });
 
 				if( classie.has( el, 'md-setperspective' ) ) {
 					setTimeout( function() {

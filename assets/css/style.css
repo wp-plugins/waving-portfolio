@@ -204,7 +204,7 @@ top:0;
 left:0; 
 width:100%; 
 height:100%;
-z-index:100; 
+z-index:999991; 
 background-color:rgba(0,0,0,0.7);
 display:none; 
 text-align:left; 
@@ -217,15 +217,28 @@ button.waving-button{
   padding: 1px 12px 0px 12px; 
   display: inline-block; 
 		color:black;
-  background-color:#DFDFDF; 
+  background-color:#A7A7A7; 
 		-webkit-border-radius: 3px;
 		-moz-border-radius: 3px;
 		border-radius: 3px; 
   margin-left: 3px;
-  margin-bottom: 6px;
 }
 
-button.waving-button:hover{
-	background-color:#585858; 
-	color:white;
-}
+	button.waving-button:hover{
+		background-color:rgb(201, 201, 201); 
+  color:gray;
+	}
+ 
+div.waving-close
+ {
+   float:right;
+   background-image: url('../images/close-button.png');
+   height:46px;
+   width:46px;
+   margin-top: 5px;
+   margin-left: 32px;
+   cursor: pointer ;
+   position: relative;
+   right: -50px;
+   padding:10;
+ }

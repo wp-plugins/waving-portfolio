@@ -2,7 +2,7 @@
 	position: absolute;
 	left: 0;
 	width: 100%;
-	z-index: 200000;
+	z-index: 10000000;
 	text-align: center;
 	line-height: 0;
 	}
@@ -54,8 +54,8 @@
 	}
 #prevLink { left: 0; float: left;}
 #nextLink { right: 0; float: right;}
-#prevLink:hover, #prevLink:visited:hover { background: url(../images/prev.gif) left 50% no-repeat; }
-#nextLink:hover, #nextLink:visited:hover { background: url(../images/next.gif) right 50% no-repeat; }
+#prevLink:hover, #prevLink:visited:hover { background: url('../images/prev.gif') left 50% no-repeat; }
+#nextLink:hover, #nextLink:visited:hover { background: url('../images/next.gif') right 50% no-repeat; }
 
 /*** START : next / previous text links ***/
 #nextLinkText, #prevLinkText{
