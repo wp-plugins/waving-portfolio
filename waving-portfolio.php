@@ -214,7 +214,7 @@ function Building_Portfolio_List($width,$fx, $theme, $all)
                       <div class="modal-gallary">
                         '.$gallary.'<br/><br/>
                       </div>
-                    <div class="modal-content">'.get_the_content().'</div>
+                    <div class="modal-waving-content">'.get_the_content().'</div>
                   </div>
                   </div>';
                 
