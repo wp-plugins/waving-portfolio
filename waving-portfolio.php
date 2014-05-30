@@ -84,7 +84,7 @@ function waving_func( $atts ) {
                 'theme'=> 'dark', 
                 'all' => '1'),
                 $atts ) );
-        echo Building_Portfolio_List($width,$effect,$theme, $all);
+        return Building_Portfolio_List($width,$effect,$theme, $all);
 }
 
 add_shortcode( 'waving', 'waving_func');
@@ -148,6 +148,7 @@ function Building_Portfolio_List($width,$fx, $theme, $all)
     $lists = array();
     $modals = array();
     $paramCustom = array();
+    $categoryMenu = array();
     
     $i = 1;
         
@@ -179,13 +180,13 @@ function Building_Portfolio_List($width,$fx, $theme, $all)
   
   if($all == "1" && count($tax_terms)!=0)
   {
-    echo '<button class="waving-button" onClick="ShowLists(\'all\')">All</button>';
+    $categoryMenu[] = '<button class="waving-button" onClick="ShowLists(\'all\')">All</button>';
   }
   
   if(count($tax_terms)!=0){
     foreach($tax_terms as $term)
     {
-      echo '<button class="waving-button" onClick="ShowLists(\''.$term->slug.'\')">'.$term->name.'</button>';
+      $categoryMenu[] = '<button class="waving-button" onClick="ShowLists(\''.$term->slug.'\')">'.$term->name.'</button>';
     }
   }
  
@@ -245,7 +246,7 @@ function Building_Portfolio_List($width,$fx, $theme, $all)
     
     wp_localize_script( 'my-custom-script', 'pluginSetting', $paramCustom );
     
-    return implode("",$modals).''.$listHeader.''.implode("",$lists).''.$listFooter.''.$static;
+    return implode("",$categoryMenu).''.implode("",$modals).''.$listHeader.''.implode("",$lists).''.$listFooter.''.$static;
 }
 
 add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
