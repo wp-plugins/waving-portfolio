@@ -18,7 +18,7 @@ perspective effects (not including the modals and the overlay).
 	perspective: 600px;
 }
 
-.container {
+.waving-container {
 	background: #e74c3c;
 	min-height: 100%;
 }
@@ -588,7 +588,7 @@ ul li
 	background: rgba(180,46,32,0.5);
 }
 
-.md-show.md-effect-16 ~ .container {
+.md-show.md-effect-16 ~ .waving-container {
 	-webkit-filter: blur(3px);
 	-moz-filter: blur(3px);
 	filter: blur(3px);
@@ -602,7 +602,7 @@ ul li
 	opacity: 0;
 }
 
-.md-show.md-effect-16 ~ .container,
+.md-show.md-effect-16 ~ .waving-container,
 .md-effect-16 .md-content {
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -617,8 +617,8 @@ ul li
 	opacity: 1;
 }
 
-/* Effect 17:  Slide in from bottom with perspective on container */
-.md-show.md-effect-17 ~ .container {
+/* Effect 17:  Slide in from bottom with perspective on waving-container */
+.md-show.md-effect-17 ~ .waving-container {
 	height: 100%;
 	overflow: hidden;
 	-webkit-transition: -webkit-transform 0.3s;
@@ -626,7 +626,7 @@ ul li
 	transition: transform 0.3s;
 }	
 
-.md-show.md-effect-17 ~ .container,
+.md-show.md-effect-17 ~ .waving-container,
 .md-show.md-effect-17 ~ .md-overlay  {
 	-webkit-transform: rotateX(-2deg);
 	-moz-transform: rotateX(-2deg);
@@ -659,8 +659,8 @@ ul li
 	transition: all 0.3s 0.2s;
 }
 
-/* Effect 18:  Slide from right with perspective on container */
-.md-show.md-effect-18 ~ .container {
+/* Effect 18:  Slide from right with perspective on waving-container */
+.md-show.md-effect-18 ~ .waving-container {
 	height: 100%;
 	overflow: hidden;
 }
@@ -672,7 +672,7 @@ ul li
 	transition: all 0.5s;
 }
 
-.md-show.md-effect-18 ~ .container,
+.md-show.md-effect-18 ~ .waving-container,
 .md-show.md-effect-18 ~ .md-overlay {
 	-webkit-transform-style: preserve-3d;
 	-webkit-transform-origin: 0% 50%;
@@ -719,8 +719,8 @@ ul li
 	transition: all 0.5s 0.1s;
 }
 
-/* Effect 19:  Slip in from the top with perspective on container */
-.md-show.md-effect-19 ~ .container {
+/* Effect 19:  Slip in from the top with perspective on waving-container */
+.md-show.md-effect-19 ~ .waving-container {
 	height: 100%;
 	overflow: hidden;
 }
@@ -731,7 +731,7 @@ ul li
 	transition: all 0.5s;
 }
 
-.md-show.md-effect-19 ~ .container,
+.md-show.md-effect-19 ~ .waving-container,
 .md-show.md-effect-19 ~ .md-overlay {
 	-webkit-transform-style: preserve-3d;
 	-webkit-transform-origin: 50% 100%;
