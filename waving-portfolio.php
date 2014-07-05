@@ -12,7 +12,7 @@
  * Plugin Name: Waving Portfolio
  * Plugin URI:  http://www.itechflare.com/
  * Description: Free plugin with very slick design to professionally promote & present your job portfolio.
- * Version:     1.0.6
+ * Version:     1.1.2
  * Author:      Abdulrhman Elbuni
  * Author URI:  http://www.itechflare.com/
  * Text Domain: portfolioposttype
@@ -82,9 +82,11 @@ function waving_func( $atts ) {
                 'effect' => 12,
                 'width' => 250,
                 'theme'=> 'dark', 
-                'all' => '1'),
+                'all' => 'true',
+                'showcat' => 'true',
+                'tag' => ''),
                 $atts ) );
-        return Building_Portfolio_List($width,$effect,$theme, $all);
+        return Building_Portfolio_List($width,$effect,$theme,$tag, $showcat, $all);
 }
 
 add_shortcode( 'waving', 'waving_func');
@@ -141,7 +143,7 @@ function my_scripts_method() {
 
 }
 
-function Building_Portfolio_List($width,$fx, $theme, $all)
+function Building_Portfolio_List($width,$fx, $theme, $tag, $showCategory,$all)
 {
     $listHeader = '<section><ul id="da-thumbs" class="da-thumbs">';
     $listFooter = '</ul></section>';
@@ -149,16 +151,23 @@ function Building_Portfolio_List($width,$fx, $theme, $all)
     $modals = array();
     $paramCustom = array();
     $categoryMenu = array();
+    // Filtered category list
+    $cat_lists = array();
+    
+    // Get portfolio posts
+    $type = 'portfolio';
+    
+    // Check whether tag is empty or not
+    $tagCondition = ($tag=='')?null:$tag;
     
     $i = 1;
         
-    // Get portfolio posts
-    $type = 'portfolio';
     $args=array(
-    'post_type' => $type,
-    'post_status' => 'publish',
-	'posts_per_page' => -1, 
-	'cache_results' => false);
+      'post_type' => $type,
+      'post_status' => 'publish',
+      'posts_per_page' => -1,
+      'portfolio_tag' => $tagCondition,
+      'cache_results' => false);
 
 	if($theme == 'light')
 	{
@@ -167,33 +176,42 @@ function Building_Portfolio_List($width,$fx, $theme, $all)
 	}
 
  // print out categories
-  $taxonomy = "portfolio_category";
-  $tax_terms = get_terms($taxonomy);
-
-  if(count($tax_terms)!=0){
-    $paramCustom = array("all" => $all,
-      "initialClass"=>$tax_terms[0]->slug);
-  }else{
-    $paramCustom = array("all" => "1",
-      "initialClass"=>"0");
-  }
-  
-  if($all == "1" && count($tax_terms)!=0)
-  {
-    $categoryMenu[] = '<button class="waving-button" onClick="ShowLists(\'all\')">All</button>';
-  }
-  
-  if(count($tax_terms)!=0){
-    foreach($tax_terms as $term)
-    {
-      $categoryMenu[] = '<button class="waving-button" onClick="ShowLists(\''.$term->slug.'\')">'.$term->name.'</button>';
-    }
-  }
+  $taxonomy = 'portfolio_category';
  
     $my_query = null;
     $my_query = new WP_Query($args);
     if( $my_query->have_posts() ) {
         while ($my_query->have_posts()) : $my_query->the_post(); 
+            
+            // Initialize categories to be used for categories menu rendering
+           $temp_cat_cmp_array[] = get_the_terms( get_the_ID(),$taxonomy);
+           
+           // ========= Start: Ensure that cat_list variable is unique ============
+           
+           if(count($temp_cat_cmp_array) != 0 && $temp_cat_cmp_array[0] != null){
+            foreach($temp_cat_cmp_array[0] as $cat_cmp)
+            {
+              $cmp_result = false;
+              if(count($cat_lists) != 0){
+                foreach($cat_lists as $cat_val)
+                {
+                  if($cat_val == $cat_cmp)
+                  {
+                    $cmp_result = true;
+                  }
+                }
+              }
+              if(!$cmp_result)
+              {
+                array_push($cat_lists, $cat_cmp);
+              }
+            }
+           }
+           unset($temp_cat_cmp_array);
+           $temp_cat_cmp_array = array();
+           
+           // ========= End: Ensure that cat_list variable is unique ============
+           
             $image = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID() ), 'single-post-thumbnail' );    
             // IF there is no image don't render a list
             if($image!=""){
@@ -242,11 +260,36 @@ function Building_Portfolio_List($width,$fx, $theme, $all)
     }
     wp_reset_query();
     
+    // ========= Start: Print out categories ============
+    if(count($cat_lists)!=0){
+      $paramCustom = array("all" => $all,
+        "initialClass"=>$cat_lists[0]->slug);
+    }else{
+      $paramCustom = array("all" => "1",
+        "initialClass"=>"0");
+    }
+
+    if($all == "true" && count($cat_lists)!=0)
+    {
+      $categoryMenu[] = '<button class="waving-button" onClick="ShowLists(\'all\')">All</button>';
+    }
+
+    if(count($cat_lists)!=0){
+      foreach($cat_lists as $term_cat)
+      {
+        $categoryMenu[] = '<button class="waving-button" onClick="ShowLists(\''.$term_cat->slug.'\')">'.$term_cat->name.'</button>';
+      }
+    }
+
+    // ========= End: Print out categories ============
+    
     $static = '<div class="md-overlay"></div><div id="waving-dim"></div>';
     
     wp_localize_script( 'my-custom-script', 'pluginSetting', $paramCustom );
     
-    return implode("",$categoryMenu).''.implode("",$modals).''.$listHeader.''.implode("",$lists).''.$listFooter.''.$static;
+    $catMenu = ($showCategory=="true")?implode("",$categoryMenu):'';
+    
+    return $catMenu.''.implode("",$modals).''.$listHeader.''.implode("",$lists).''.$listFooter.''.$static;
 }
 
 add_action( 'wp_enqueue_scripts', 'my_scripts_method' );

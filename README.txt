@@ -4,7 +4,7 @@ Donate link: http://www.itechflare.com/donate.php
 Tags: portfolio, plugin, promote, nice, job, illustrate
 Requires at least: 3.5.1
 Tested up to: 3.9.1
-Stable tag: 1.0.6
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,16 +18,21 @@ First, all you have to do is adding as much portfolio posts as you want in the n
 
 For placing your portfolio grid anywhere in your website, just use the following shortcode and you are done:
 
-waving width="xxx" theme="[light|dark]" all="[0|1]" /]
+[ waving width="xxx" theme="[light|dark]" all="[false|true]" showCat="[true|false]" tag="[string]" /]
 
-Example: [waving width="200" theme="light" all="0" /]
+Example: [waving width="200" theme="light" all="0" showCat="true" tag="[city-center or City Center or cITY Center]" /]
 
-Where:
+Definitions:
+
 Width attribute: Is controlling each portfolio item width for the whole grid elements, by default it will be set to 250px.
 
 Theme attribute: With this you can define your theme to be either light or dark.
 
 All attribute: With this attribute you can disable "all" category from showing-up in Portfolio Category menu.
+
+showCat: With showCat attribute you can choose whether you want to show the category selection menu or not (NEW)
+
+tag: Yes Finally! With this attribute you can select only those portfolio that you have tagged with specific tag name to be shown. And it does accept case insensitive strings as shown above in the example line(NEW)
 
 In the portfolio post section you can attach only one custom gallary that can consist of infinite number of images using the native wordpress media window, and once you add the shortcode of the gallary, make sure to place it inside a hidden div so it doesn't show inside the portfolio content as follow:
 
@@ -131,6 +136,12 @@ Notice: By the default the dark theme is enabled.
 * Changed close button style
 * Fix firefox compatibility issues
 
+= 1.1.2 =
+
+* Now you can generate as many autonomous portfolio lists as you want with the help of the new (tag) attribute for the shortcode.
+* Adding new capability to enable/disable categories menu.
+* Category menus are selected according to the tag filter the admin has enabled, so only related categories will be shown inside the menu.
+
 == Upgrade Notice ==
 
 = 1.0.2 =
@@ -154,6 +165,12 @@ This version fixes a grid styling problem.
 * Change the portfolio modal layout to be more readable and flixable.
 * Changed close button style
 * Fix firefox compatibility issues
+
+= 1.1.2 =
+
+* Now you can generate as many autonomous portfolio lists as you want with the help of the new (tag) attribute for the shortcode.
+* Adding new capability to enable/disable categories menu.
+* Category menus are selected according to the tag filter the admin has enabled, so only related categories will be shown inside the menu.
 
 == Arbitrary section ==
 
