@@ -42,9 +42,9 @@ Attribute Definitions:
 
 In the portfolio post section you can attach only one custom gallary that can consist of infinite number of images using the native wordpress media window, and once you add the shortcode of the gallary, make sure to place it inside a hidden div so it doesn't show inside the portfolio content as follow:
 <pre>
-[div style="display: none;"]
+<div style="display: none;">
 	[gallery ids="41,42,43,44,45"]
-[/div]
+</div>
 </pre>
 
 <h4>Demo</h4>
