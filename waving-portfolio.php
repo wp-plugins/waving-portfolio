@@ -158,7 +158,7 @@ function Building_Portfolio_List($width,$fx, $theme, $tag, $showCategory,$all)
     // Check whether tag is empty or not
     $tagCondition = ($tag=='')?null:$tag;
     
-    $listHeader = '<section><ul id="da-thumbs" class="da-thumbs-'.$tagCondition.'">';
+    $listHeader = '<section style="text-align:center"><ul id="da-thumbs" class="da-thumbs-'.$tagCondition.'">';
     $listFooter = '</ul></section>';
     
     $i = 1;
@@ -184,6 +184,8 @@ function Building_Portfolio_List($width,$fx, $theme, $tag, $showCategory,$all)
     if( $my_query->have_posts() ) {
         while ($my_query->have_posts()) : $my_query->the_post(); 
             
+			$i = rand(); 
+			
             // Initialize categories to be used for categories menu rendering
            $temp_cat_cmp_array[] = get_the_terms( get_the_ID(),$taxonomy);
            
