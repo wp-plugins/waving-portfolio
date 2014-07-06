@@ -53,9 +53,6 @@ jQuery(document).ready(function(){
         imageClickClose: false,
         disableNavbarLinks: true
     });
-
-	// Center the parent div of the portfolio lists
-	jQuery("#da-thumbs").parent().css("text-align","center");
 	
 	// Initialize dim
 	//jQuery("#waving-dim").css("height", jQuery(document).height());
