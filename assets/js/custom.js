@@ -9,16 +9,16 @@ if(pluginSetting.all == "0")
   ShowLists(pluginSetting.initialClass);
 }
 
-function ShowLists(listname)
+function ShowLists(listname,tag)
 {
   if(listname == "all")
   {
-    jQuery('.waving-item').show("fast");
+    jQuery('.da-thumbs-'+tag+' .waving-item').show("fast");
   }
   else if(listname != lastClass)
   {
-    jQuery('.waving-item').hide();
-    jQuery('.waving-'+listname).show("slow");
+    jQuery('.da-thumbs-'+tag+' .waving-item').hide();
+    jQuery('.da-thumbs-'+tag+' .waving-'+listname).show("slow");
   }
   
   lastClass = listname;

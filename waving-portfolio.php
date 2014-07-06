@@ -145,8 +145,6 @@ function my_scripts_method() {
 
 function Building_Portfolio_List($width,$fx, $theme, $tag, $showCategory,$all)
 {
-    $listHeader = '<section><ul id="da-thumbs" class="da-thumbs">';
-    $listFooter = '</ul></section>';
     $lists = array();
     $modals = array();
     $paramCustom = array();
@@ -159,6 +157,9 @@ function Building_Portfolio_List($width,$fx, $theme, $tag, $showCategory,$all)
     
     // Check whether tag is empty or not
     $tagCondition = ($tag=='')?null:$tag;
+    
+    $listHeader = '<section><ul id="da-thumbs" class="da-thumbs-'.$tagCondition.'">';
+    $listFooter = '</ul></section>';
     
     $i = 1;
         
@@ -271,13 +272,13 @@ function Building_Portfolio_List($width,$fx, $theme, $tag, $showCategory,$all)
 
     if($all == "true" && count($cat_lists)!=0)
     {
-      $categoryMenu[] = '<button class="waving-button" onClick="ShowLists(\'all\')">All</button>';
+      $categoryMenu[] = '<button class="waving-button" onClick="ShowLists(\'all\',\''.$tagCondition.'\')">All</button>';
     }
 
     if(count($cat_lists)!=0){
       foreach($cat_lists as $term_cat)
       {
-        $categoryMenu[] = '<button class="waving-button" onClick="ShowLists(\''.$term_cat->slug.'\')">'.$term_cat->name.'</button>';
+        $categoryMenu[] = '<button class="waving-button" onClick="ShowLists(\''.$term_cat->slug.'\',\''.$tagCondition.'\')">'.$term_cat->name.'</button>';
       }
     }
 
