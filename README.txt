@@ -17,13 +17,13 @@ This is a free contemporary responsive plugin with very easy control and display
 First, all you have to do is adding as much portfolio posts as you want in the new dashboard admin menu "Portfolio" along with giving a good looking featured image to each post, so it can be presented inside the portfolio grid as per your taste.
 
 For placing your portfolio grid anywhere in your website, just use the following shortcode and you are done:
-
+<pre>
 [ waving width="xxx" theme="[light|dark]" all="[false|true]" showCat="[true|false]" tag="[string]" /]
-
+</pre>
 Example: [waving width="200" theme="light" all="0" showCat="true" tag="[city-center or City Center or cITY Center]" /]
-
+<h4>
 Definitions:
-
+</h4>
 Width attribute: Is controlling each portfolio item width for the whole grid elements, by default it will be set to 250px.
 
 Theme attribute: With this you can define your theme to be either light or dark.
@@ -35,11 +35,11 @@ showCat: With showCat attribute you can choose whether you want to show the cate
 tag: Yes Finally! With this attribute you can select only those portfolio that you have tagged with specific tag name to be shown. And it does accept case insensitive strings as shown above in the example line(NEW)
 
 In the portfolio post section you can attach only one custom gallary that can consist of infinite number of images using the native wordpress media window, and once you add the shortcode of the gallary, make sure to place it inside a hidden div so it doesn't show inside the portfolio content as follow:
-
+<pre>
 [div style="display: none;"]
 	[gallery ids="41,42,43,44,45"]
 [/div]
-
+</pre>
 Here is a demo link for this plugin: <a href="http://www.itechflare.com/main/demo/"><b>DEMO</b></a>
 
 Enjoy! And don't forget to rate, and ask for support if you have faced any troubles.
