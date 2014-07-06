@@ -12,6 +12,9 @@ This is a free responsive plugin that gives the website owners the capability to
 
 == Description ==
 
+<h4>Description</h4>
+
+[Official website:](http://www.itechflare.com)
 This is a free contemporary responsive plugin with very easy control and display flow that gives website owners the capability to professionally & elegantly promote & represent their long job achievements in a unified good looking portfolio grid.
 
 First, all you have to do is adding as much portfolio posts as you want in the new dashboard admin menu "Portfolio" along with giving a good looking featured image to each post, so it can be presented inside the portfolio grid as per your taste.
@@ -30,21 +33,21 @@ Example:
 <h3>
 Attribute Definitions:
 </h3>
-* Width attribute: Is controlling each portfolio item width for the whole grid elements, by default it will be set to 250px.
+* **width** attribute: Is controlling each portfolio item width for the whole grid elements, by default it will be set to 250px. Notice that you don't need to write "px" after numbers.
 
-* Theme attribute: With this you can define your theme to be either light or dark.
+* **theme** attribute: With this you can define your theme to be either light or dark.
 
-* All attribute: With this attribute you can disable "all" category from showing-up in Portfolio Category menu.
+* **all** attribute: With this attribute you can disable "all" category from showing-up in Portfolio Category menu.
 
-* showCat: With showCat attribute you can choose whether you want to show the category selection menu or not (NEW)
+* **showCat**: With showCat attribute you can choose whether you want to show the category selection menu or not (NEW)
 
-* tag: Yes Finally! With this attribute you can select only those portfolio that you have tagged with specific tag name to be shown. And it does accept case insensitive strings as shown above in the example line(NEW)
+* **tag**: Yes Finally! With this attribute you can select only those portfolio that you have tagged with specific tag name to be shown. And it does accept case insensitive strings as shown above in the example line(NEW)
 
 In the portfolio post section you can attach only one custom gallary that can consist of infinite number of images using the native wordpress media window, and once you add the shortcode of the gallary, make sure to place it inside a hidden div so it doesn't show inside the portfolio content as follow:
 <pre>
-<div style="display: none;">
+&lt;div style="display: none;"&gt;
 	[gallery ids="41,42,43,44,45"]
-</div>
+&lt;/div&gt;
 </pre>
 
 <h4>Demo</h4>
