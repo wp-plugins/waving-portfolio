@@ -28,7 +28,7 @@ Example:
 	tag="[city-center or City Center or cITY Center]" /]
 </pre>
 <h3>
-Definitions:
+Attribute Definitions:
 </h3>
 * Width attribute: Is controlling each portfolio item width for the whole grid elements, by default it will be set to 250px.
 
@@ -47,7 +47,7 @@ In the portfolio post section you can attach only one custom gallary that can co
 [/div]
 </pre>
 
-<h4>Demo</demo>
+<h4>Demo</h4>
 Here is a demo link for this plugin: <a href="http://www.itechflare.com/main/demo/"><b>DEMO</b></a>
 
 Enjoy! And don't forget to rate, and ask for support if you have faced any troubles.
