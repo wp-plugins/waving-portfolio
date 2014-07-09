@@ -1,6 +1,6 @@
 === Waving Portfolio ===
 Contributors: aelbuni
-Donate link: http://www.itechflare.com/donate.php
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=abdulrhman%2eelbuni%40gmail%2ecom&lc=CA&item_name=Waving%20Portfolio%20%2d%20Donation&item_number=20140790&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: portfolio, plugin, promote, nice, job, illustrate
 Requires at least: 3.5.1
 Tested up to: 3.9.1
