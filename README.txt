@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=abdul
 Tags: portfolio, plugin, promote, nice, job, illustrate
 Requires at least: 3.5.1
 Tested up to: 3.9.1
-Stable tag: 1.1.2
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,18 +22,22 @@ First, all you have to do is adding as much portfolio posts as you want in the n
 For placing your portfolio grid anywhere in your website, just use the following shortcode and you are done:
 <pre>
 Template:
-[ waving width="xxx" theme="[light|dark]" all="[false|true]" 
+[ waving {height="xxx" or width="xxx"} theme="[light|dark]" all="[false|true]" 
 	showCat="[true|false]" tag="[string]" /]
 </pre>
 <pre>
 Example: 
 [waving width="200" theme="light" all="0" showCat="true" 
 	tag="[city-center or City Center or cITY Center]" /]
+	
+**Notice that if you remove width attribute, and use height, the whole images will be resized based on height instead of width.**
 </pre>
 <h3>
 Attribute Definitions:
 </h3>
-* **width** attribute: Is controlling each portfolio item width for the whole grid elements, by default it will be set to 250px. Notice that you don't need to write "px" after numbers.
+* **width** attribute: Is controlling each portfolio item's width for the whole grid elements, by default it will be set to 0. Notice that you don't need to write "px" after numbers.
+
+* **height** attribute: Is controlling each portfolio item's height for the whole grid elements, by default it will be set to 250px. Notice that you don't need to write "px" after numbers. If you set both width and height attributes the width attribute will take-over, so please make sure to remove width attribute if you need your portfolio elements to be sorted based on height.
 
 * **theme** attribute: With this you can define your theme to be either light or dark.
 
@@ -153,6 +157,11 @@ Notice: By the default the dark theme is enabled.
 * Adding new capability to enable/disable categories menu.
 * Category menus are selected according to the tag filter the admin has enabled, so only related categories will be shown inside the menu.
 
+= 1.1.4 =
+
+* Quality improvement
+* Add height attribute option so admin can size the portfolio elements based on height.
+
 == Upgrade Notice ==
 
 = 1.0.2 =
@@ -182,6 +191,11 @@ This version fixes a grid styling problem.
 * Now you can generate as many autonomous portfolio lists as you want with the help of the new (tag) attribute for the shortcode.
 * Adding new capability to enable/disable categories menu.
 * Category menus are selected according to the tag filter the admin has enabled, so only related categories will be shown inside the menu.
+
+= 1.1.4 =
+
+* Quality improvement
+* Add height attribute option so admin can size the portfolio elements based on height.
 
 == Arbitrary section ==
 

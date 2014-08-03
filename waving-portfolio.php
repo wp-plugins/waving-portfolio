@@ -12,7 +12,7 @@
  * Plugin Name: Waving Portfolio
  * Plugin URI:  http://www.itechflare.com/
  * Description: Free plugin with very slick design to professionally promote & present your job portfolio.
- * Version:     1.1.2
+ * Version:     1.1.4
  * Author:      Abdulrhman Elbuni
  * Author URI:  http://www.itechflare.com/
  * Text Domain: portfolioposttype
@@ -80,13 +80,14 @@ if ( is_admin() ) {
 function waving_func( $atts ) {
         extract( shortcode_atts( array(
                 'effect' => 12,
-                'width' => 250,
+                'width' => 0,
+                'height' => 250,
                 'theme'=> 'dark', 
                 'all' => 'true',
                 'showcat' => 'true',
                 'tag' => ''),
                 $atts ) );
-        return Building_Portfolio_List($width,$effect,$theme,$tag, $showcat, $all);
+        return Building_Portfolio_List($width, $height, $effect,$theme,$tag, $showcat, $all);
 }
 
 add_shortcode( 'waving', 'waving_func');
@@ -143,7 +144,7 @@ function my_scripts_method() {
 
 }
 
-function Building_Portfolio_List($width,$fx, $theme, $tag, $showCategory,$all)
+function Building_Portfolio_List($width, $height, $fx, $theme, $tag, $showCategory,$all)
 {
     $lists = array();
     $modals = array();
@@ -178,6 +179,7 @@ function Building_Portfolio_List($width,$fx, $theme, $tag, $showCategory,$all)
 
  // print out categories
   $taxonomy = 'portfolio_category';
+  $image_code = '';
  
     $my_query = null;
     $my_query = new WP_Query($args);
@@ -249,9 +251,16 @@ function Building_Portfolio_List($width,$fx, $theme, $tag, $showCategory,$all)
                   }
                 }
                 
+                if($width != 0){
+                  $image_code = '<img src="'.$image[0].'" style="width:'.$width.'px" />';
+                }else
+                {
+                  $image_code = '<img src="'.$image[0].'" style="height:'.$height.'px" >';
+                }
+                
                 $list = '<li class="waving-item '.$cat_class.'">
                         <a class="md-trigger" data-modal="modal-'.$i.'">
-                                <img src="'.$image[0].'" width="'.$width.'" />
+                                '.$image_code.'
                                 <div style="display: block; left: 100%; top: 0px; overflow: hidden; -webkit-transition: all 300ms ease; transition: all 300ms ease;"><span>'.get_the_title().'</span></div>
                         </a>
                 </li>';
