@@ -30,7 +30,7 @@ Example:
 [waving width="200" theme="light" all="0" showCat="true" 
 	tag="[city-center or City Center or cITY Center]" /]
 	
-**Notice that if you remove width attribute, and use height, the whole images will be resized based on height instead of width.**
+Notice that if you remove width attribute, and use height, the whole images will be resized based on height instead of width.
 </pre>
 <h3>
 Attribute Definitions:
