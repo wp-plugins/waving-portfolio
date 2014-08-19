@@ -8,7 +8,7 @@ Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This is a free multi-purpose responsive plugin that gives the website owners the capability to elegantly represent their long job achievements in a unified portfolio grid; moreover, it could work as a nice gallary plugin.
+This is a free multi-purpose responsive plugin that gives the website owners the capability to elegantly represent their long job achievements; yet, it is a gallary plugin.
 
 == Description ==
 
