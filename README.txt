@@ -201,8 +201,8 @@ This version fixes a grid styling problem.
 
 = 1.1.5 =
 
-* Force featured image to be listed in posts
-	* add_theme_support( 'post-thumbnails' );
+* Force featured image to be listed in posts. 
+add_theme_support( 'post-thumbnails' );
 * Adding clicking attribute, to enable/disable clicking effect
 
 
