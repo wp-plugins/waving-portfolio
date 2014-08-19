@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=abdul
 Tags: portfolio, plugin, promote, nice, job, illustrate
 Requires at least: 3.5.1
 Tested up to: 3.9.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,7 +23,7 @@ For placing your portfolio grid anywhere in your website, just use the following
 <pre>
 Template:
 [ waving {height="xxx" or width="xxx"} theme="[light|dark]" all="[false|true]" 
-	showCat="[true|false]" tag="[string]" /]
+	showCat="[true|false]" tag="[string]" clicking="[false|true]" /]
 </pre>
 <pre>
 Example: 
@@ -46,6 +46,8 @@ Attribute Definitions:
 * **showCat**: With showCat attribute you can choose whether you want to show the category selection menu or not (NEW)
 
 * **tag**: Yes Finally! With this attribute you can select only those portfolio that you have tagged with specific tag name to be shown. And it does accept case insensitive strings as shown above in the example line(NEW)
+
+* **clicking**: This attribute allows the admin to disable the clicking effect for portfolio items(NEW)
 
 In the portfolio post section you can attach only one custom gallary that can consist of infinite number of images using the native wordpress media window, and once you add the shortcode of the gallary, make sure to place it inside a hidden div so it doesn't show inside the portfolio content as follow:
 <pre>
@@ -196,6 +198,13 @@ This version fixes a grid styling problem.
 
 * Quality improvement
 * Add height attribute option so admin can size the portfolio elements based on height.
+
+= 1.1.5 =
+
+* Force featured image to be listed in posts
+	* add_theme_support( 'post-thumbnails' );
+* Adding clicking attribute, to enable/disable clicking effect
+
 
 == Arbitrary section ==
 

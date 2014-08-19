@@ -12,7 +12,7 @@
  * Plugin Name: Waving Portfolio
  * Plugin URI:  http://www.itechflare.com/
  * Description: Free plugin with very slick design to professionally promote & present your job portfolio.
- * Version:     1.1.4
+ * Version:     1.1.5
  * Author:      Abdulrhman Elbuni
  * Author URI:  http://www.itechflare.com/
  * Text Domain: portfolioposttype
@@ -42,6 +42,8 @@ register_activation_hook( __FILE__, array( $waving_portfolio, 'activate' ) );
 
 // Initialise registrations for post-activation requests.
 $portfolio_post_type_registrations->init();
+
+add_theme_support( 'post-thumbnails' );
 
 /**
  * Adds styling to the dashboard for the post type and adds portfolio posts
@@ -84,10 +86,11 @@ function waving_func( $atts ) {
                 'height' => 250,
                 'theme'=> 'dark', 
                 'all' => 'true',
+				'clicking' => 'true',
                 'showcat' => 'true',
                 'tag' => ''),
                 $atts ) );
-        return Building_Portfolio_List($width, $height, $effect,$theme,$tag, $showcat, $all);
+        return Building_Portfolio_List($width, $height, $effect,$theme,$tag, $showcat, $all, $clicking);
 }
 
 add_shortcode( 'waving', 'waving_func');
@@ -144,8 +147,11 @@ function my_scripts_method() {
 
 }
 
-function Building_Portfolio_List($width, $height, $fx, $theme, $tag, $showCategory,$all)
+function Building_Portfolio_List($width, $height, $fx, $theme, $tag, $showCategory,$all, $click)
 {
+	if($click == "true") $disableClicking = 'class="md-trigger"';
+	else $disableClicking = '';
+	
     $lists = array();
     $modals = array();
     $paramCustom = array();
@@ -259,7 +265,7 @@ function Building_Portfolio_List($width, $height, $fx, $theme, $tag, $showCatego
                 }
                 
                 $list = '<li class="waving-item '.$cat_class.'">
-                        <a class="md-trigger" data-modal="modal-'.$i.'">
+                        <a '.$disableClicking.' data-modal="modal-'.$i.'">
                                 '.$image_code.'
                                 <div style="display: block; left: 100%; top: 0px; overflow: hidden; -webkit-transition: all 300ms ease; transition: all 300ms ease;"><span>'.get_the_title().'</span></div>
                         </a>
