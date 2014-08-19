@@ -1,0 +1,17 @@
+.md-show.md-effect-12 ~ .md-overlay {
+background: #fff;
+}
+
+div.md-content h3
+{
+	color: #000
+}
+div.md-content h2
+{
+	color: #000
+}
+
+div.modal-waving-content
+{
+	color: #000
+}
