@@ -1,21 +1,21 @@
 === Waving Portfolio ===
 Contributors: aelbuni
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=abdulrhman%2eelbuni%40gmail%2ecom&lc=CA&item_name=Waving%20Portfolio%20%2d%20Donation&item_number=20140790&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
-Tags: portfolio, plugin, promote, nice, job, illustrate
+Tags: gallary, picture, photo, portfolio, plugin, promote, nice, job, illustrate, photography
 Requires at least: 3.5.1
 Tested up to: 3.9.1
 Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This is a free responsive plugin that gives the website owners the capability to elegantly represent their long job achievements in a unified portfolio grid.
+This is a free multi-purpose responsive plugin that gives the website owners the capability to elegantly represent their long job achievements in a unified portfolio grid; moreover, it could work as a nice gallary plugin.
 
 == Description ==
 
 <h4>Description</h4>
 
 [Official website:](http://www.itechflare.com)
-This is a free contemporary responsive plugin with very easy control and display flow that gives website owners the capability to professionally & elegantly promote & represent their long job achievements in a unified good looking portfolio grid.
+This is a free contemporary multi-purpose responsive plugin with very easy control and display flow that gives website owners the capability to professionally & elegantly promote & represent their long job achievements in a unified good looking portfolio grid; yet you can use it as flixable gallary plugin.
 
 First, all you have to do is adding as much portfolio posts as you want in the new dashboard admin menu "Portfolio" along with giving a good looking featured image to each post, so it can be presented inside the portfolio grid as per your taste.
 
