@@ -51,11 +51,11 @@ Attribute Definitions:
 
 (Version 1.2) For each individual portfolio item you can either select or upload your gallary using the meta boxes inside portfolio item's window, overall you can change all of this individual settings for any specific post:
 
-1- Native gallary upload and selection (NEW)
-2- Enable Title/Description for sliding panel (NEW)
-3- Change font size for sliding panel (NEW)
-4- Control description character length (NEW)
-5- Switch between hyperlink or modal window redirection whenever your click over a specific portfolio item (NEW)
+* Native gallary upload and selection **(NEW)**
+* Enable Title/Description for sliding panel **(NEW)**
+* Change font size for sliding panel **(NEW)**
+* Control description character length **(NEW)**
+* Switch between hyperlink or modal window redirection whenever your click over a specific portfolio item **(NEW)**
 
 <h4>Demo</h4>
 Here is a demo link for this plugin: <a href="http://www.itechflare.com/main/demo/"><b>DEMO</b></a>
