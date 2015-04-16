@@ -22,7 +22,7 @@ class Portfolio_Post_Type_Registrations {
     public $post_type = 'itech_portfolio';
     public $c_post_type = 'Portfolio';
 
-	public $taxonomies = array( 'waving_category', 'waving_tag' );
+	public $taxonomies = array( 'waving_portfolio_category', 'waving_portfolio_tag' );
 
 	public function init() {
 		// Add the portfolio post type and taxonomies
@@ -38,6 +38,7 @@ class Portfolio_Post_Type_Registrations {
 	 */
 	public function register() {
 		$this->register_post_type();
+        $this->register_taxonomy_category();
 		$this->register_taxonomy_tag();
 	}
 
