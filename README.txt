@@ -95,13 +95,27 @@ e.g.
 
 == Frequently Asked Questions ==
 
-= How I can add gallary to a portfolio ? =
+= How I can create 2 and more portfolios ? =
 
-In the post section you can attach custom gallaries using the native wordpress media window, and once you add the shortcode of the gallary, make sure to place inside a hidden div so it doesn't show inside the portfolio content as follow:
+It is a mix of using categories and tags, so if you need to seperate portfolios, just tag portfolio items with different tag names, for instance:
 
-<div style="display: none;">
-	[gallery ids="41,42,43,44,45"]
-</div>
+Portfolio item#1 -> tag=City
+Portfolio item#2 -> tag=City
+Portfolio item#3 -> tag=Countries
+Portfolio item#4 -> tag=Countries
+Portfolio item#5 -> tag=Continent
+Portfolio item#6 -> tag=Continent
+
+Now you can have three different portfolios using the following shortcodes:
+
+1-[waving width="200" theme="light" all="0" showCat="true"
+tag="city" /]
+2-[waving width="200" theme="light" all="0" showCat="true"
+tag="countries" /]
+3-[waving width="200" theme="light" all="0" showCat="true"
+tag="Continent" /]
+
+And within each tag you can devide the list of portfolio using categories so it will become filterable through categories.
 
 = How I can change the theme style ? =
 
