@@ -2,9 +2,9 @@
 Contributors: aelbuni
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=abdulrhman%2eelbuni%40gmail%2ecom&lc=CA&item_name=Waving%20Portfolio%20%2d%20Donation&item_number=20140790&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: gallary, picture, photo, portfolio, plugin, promote, nice, job, illustrate, photography
-Requires at least: 3.5.1
-Tested up to: 3.9.1
-Stable tag: 1.1.5
+Requires at least: 3.8.1
+Tested up to: 4.1.0
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,18 +43,19 @@ Attribute Definitions:
 
 * **all** attribute: With this attribute you can disable "all" category from showing-up in Portfolio Category menu.
 
-* **showCat**: With showCat attribute you can choose whether you want to show the category selection menu or not (NEW)
+* **showCat**: With showCat attribute you can choose whether you want to show the category selection menu or not
 
 * **tag**: Yes Finally! With this attribute you can select only those portfolio that you have tagged with specific tag name to be shown. And it does accept case insensitive strings as shown above in the example line(NEW)
 
-* **clicking**: This attribute allows the admin to disable the clicking effect for portfolio items(NEW)
+* **clicking**: This attribute allows the admin to disable the clicking effect for portfolio items
 
-In the portfolio post section you can attach only one custom gallary that can consist of infinite number of images using the native wordpress media window, and once you add the shortcode of the gallary, make sure to place it inside a hidden div so it doesn't show inside the portfolio content as follow:
-<pre>
-&lt;div style="display: none;"&gt;
-	[gallery ids="41,42,43,44,45"]
-&lt;/div&gt;
-</pre>
+(Version 1.2) For each individual portfolio item you can either select or upload your gallary using the meta boxes inside portfolio item's window, overall you can change all of this individual settings for any specific post:
+
+1- Native gallary upload and selection (NEW)
+2- Enable Title/Description for sliding panel (NEW)
+3- Change font size for sliding panel (NEW)
+4- Control description character length (NEW)
+5- Switch between hyperlink or modal window redirection whenever your click over a specific portfolio item (NEW)
 
 <h4>Demo</h4>
 Here is a demo link for this plugin: <a href="http://www.itechflare.com/main/demo/"><b>DEMO</b></a>
@@ -164,6 +165,15 @@ Notice: By the default the dark theme is enabled.
 * Quality improvement
 * Add height attribute option so admin can size the portfolio elements based on height.
 
+= 1.2 =
+
+* Flexible individual portfolio item settings
+* Native gallary upload and selection
+* Enable Title/Description for sliding panel
+* Change font size for sliding panel
+* Control description character length
+* Switch between hyperlink or modal window redirection whenever your click over a specific portfolio item
+
 == Upgrade Notice ==
 
 = 1.0.2 =
@@ -205,7 +215,19 @@ This version fixes a grid styling problem.
 add_theme_support( 'post-thumbnails' );
 * Adding clicking attribute, to enable/disable clicking effect
 
+= 1.2 =
+
+* NOTICE: Total redesign of the plugin. If you want to update to 1.2, you have to recreate portfolio items from the scratch in a new simpler way.
+New Features:
+* Flexible individual portfolio item settings
+* Native gallary upload and selection
+* Enable Title/Description for sliding panel
+* Change font size for sliding panel
+* Control description character length
+* Switch between hyperlink or modal window redirection whenever your click over a specific portfolio item
 
 == Arbitrary section ==
 
 == Updates ==
+
+* NOTICE: Total redesign of the plugin in (v1.2). If you want to upgrade, you have to recreate portfolio items from the scratch in a new simpler way.

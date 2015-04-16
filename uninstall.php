@@ -2,11 +2,11 @@
 /**
  * Fired when the plugin is uninstalled.
  *
- * @package   Plugin_Name
- * @author    Your Name <email@example.com>
+ * @package   waving-portfolio
+ * @author    aelbuni
  * @license   GPL-2.0+
- * @link      http://example.com
- * @copyright 2014 Your Name or Company Name
+ * @link      http://www.itechflare.com
+ * @copyright 2015 itechflare ltd
  */
 
 // If uninstall not called from WordPress, then exit
@@ -14,4 +14,16 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
 
-// @TODO: Define uninstall functionality here
+if ( ! current_user_can( 'activate_plugins' ) ) {
+	exit;
+}
+
+// Define uninstall functionality here
+$post_type = "itech_portfolio";
+global $wp_post_types;
+if ( isset( $wp_post_types[ $post_type ] ) ) {
+    unset( $wp_post_types[ $post_type ] );
+    return true;
+}
+
+flush_rewrite_rules();
