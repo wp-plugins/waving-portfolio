@@ -99,21 +99,18 @@ e.g.
 
 It is a mix of using categories and tags, so if you need to seperate portfolios, just tag portfolio items with different tag names, for instance:
 
-Portfolio item#1 -> tag=City
-Portfolio item#2 -> tag=City
-Portfolio item#3 -> tag=Countries
-Portfolio item#4 -> tag=Countries
-Portfolio item#5 -> tag=Continent
-Portfolio item#6 -> tag=Continent
+* Portfolio item#1 -> tag=City
+* Portfolio item#2 -> tag=City
+* Portfolio item#3 -> tag=Countries
+* Portfolio item#4 -> tag=Countries
+* Portfolio item#5 -> tag=Continent
+* Portfolio item#6 -> tag=Continent
 
 Now you can have three different portfolios using the following shortcodes:
 
-1-[waving width="200" theme="light" all="0" showCat="true"
-tag="city" /]
-2-[waving width="200" theme="light" all="0" showCat="true"
-tag="countries" /]
-3-[waving width="200" theme="light" all="0" showCat="true"
-tag="Continent" /]
+** [waving width="200" theme="light" all="0" showCat="true" tag="city" /]
+**[waving width="200" theme="light" all="0" showCat="true" tag="countries" /]
+**[waving width="200" theme="light" all="0" showCat="true" tag="Continent" /]
 
 And within each tag you can devide the list of portfolio using categories so it will become filterable through categories.
 
