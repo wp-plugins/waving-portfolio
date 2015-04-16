@@ -156,7 +156,7 @@ class Waving_Portfolio_Plugin
         'post_type' => $type,
         'post_status' => 'publish',
         'posts_per_page' => -1,
-        'portfolio_tag' => $tagCondition,
+        'waving_portfolio_tag' => $tagCondition,
         'cache_results' => false);
 
       if($theme == 'light')
@@ -166,7 +166,7 @@ class Waving_Portfolio_Plugin
       }
 
       // print out categories
-      $taxonomy = 'portfolio_category';
+      $taxonomy = 'waving_portfolio_category';
       $image_code = '';
 
       $my_query = null;
