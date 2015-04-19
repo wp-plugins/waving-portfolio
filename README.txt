@@ -95,6 +95,28 @@ e.g.
 
 == Frequently Asked Questions ==
 
+= If you update to 1.2 from any previous version and lost your portfolio items, here is how to retrieve them =
+
+"1.2 NOTICE: Total redesign of the plugin in (v1.2). If you want to upgrade, you have to recreate portfolio items from the scratch in a new simpler way."
+
+This is been written as update notice.
+
+Quick solution for your migration, is to execute these SQL query:
+
+<ol>
+<li>
+UPDATE wp_posts SET post_type='itech_portfolio' WHERE post_type='portfolio';</li>
+<li>
+UPDATE wp_term_taxonomy SET taxonomy=’waving_portfolio_category’ WHERE taxonomy='portfolio_category';</li>
+<li>
+UPDATE wp_term_taxonomy SET taxonomy='waving_portfolio_tag' WHERE taxonomy='portfolio_tag';</li>
+</ol>
+And all should be sorted out.
+
+A major enhancement and total redesign for the plugin has been done in version 1.2, note that you have to select your galleries again using the new selection feature for each portfolio item, for a short term changes this might be hectic, but for long term simplicity and manageability it is better to move to 1.2.
+
+Thanks for your migration
+
 = How I can create 2 and more portfolios ? =
 
 It is a mix of using categories and tags, so if you need to seperate portfolios, just tag portfolio items with different tag names, for instance:
