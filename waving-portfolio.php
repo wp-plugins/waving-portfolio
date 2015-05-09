@@ -12,10 +12,10 @@
  * Plugin Name: Waving Portfolio
  * Plugin URI:  http://www.itechflare.com/
  * Description: Free plugin with very slick design to professionally promote & present your job portfolio.
- * Version:     1.2
+ * Version:     1.2.1
  * Author:      Abdulrhman Elbuni
  * Author URI:  http://www.itechflare.com/
- * Text Domain: portfolioposttype
+ * Text Domain: wavingportfolio
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path: /languages
@@ -57,6 +57,41 @@ class Waving_Portfolio_Plugin
     add_shortcode( 'waving', array( $this, 'waving_func'));
     add_action( 'wp_enqueue_scripts', array( $this, 'load_frontend_libraries') );
     add_filter( 'shortcode_atts_gallery', array( $this, 'waving_gallery_atts') , 10, 3 );
+  }
+  
+  function upgrade_to_1_2()
+  {
+    global $wpdb;
+    // First update fix
+    $wpdb->update( 
+        'wp_posts', 
+        array( 
+            'post_type' => 'itech_portfolio',	// string
+        ), 
+        array( 'post_type' => 'portfolio' ), 
+        array( '%s' ), // Formatting column
+        array( '%s' ) 
+    );
+    // Second update fix
+    $wpdb->update( 
+        'wp_term_taxonomy', 
+        array( 
+            'taxonomy' => 'waving_portfolio_category',	// string
+        ), 
+        array( 'taxonomy' => 'portfolio_category' ), 
+        array( '%s' ), // Formatting column
+        array( '%s' ) 
+    );
+    // third update fix
+    $wpdb->update( 
+        'wp_term_taxonomy', 
+        array( 
+            'taxonomy' => 'waving_portfolio_tag',	// string
+        ), 
+        array( 'taxonomy' => 'portfolio_tag' ), 
+        array( '%s' ), // Formatting column
+        array( '%s' ) 
+    );
   }
   
   // [waving effect="value"]

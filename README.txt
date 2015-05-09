@@ -3,8 +3,8 @@ Contributors: aelbuni
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=abdulrhman%2eelbuni%40gmail%2ecom&lc=CA&item_name=Waving%20Portfolio%20%2d%20Donation&item_number=20140790&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: gallary, picture, photo, portfolio, plugin, promote, nice, job, illustrate, photography
 Requires at least: 3.8.1
-Tested up to: 4.1.2
-Stable tag: 1.2
+Tested up to: 4.2.2
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,7 @@ This is a free multi-purpose responsive plugin that gives the website owners the
 <h4>Description</h4>
 
 [Official website:](http://www.itechflare.com)
-This is a free contemporary multi-purpose responsive plugin with very easy control and display flow that gives website owners the capability to professionally & elegantly promote & represent their long job achievements in a unified good looking portfolio grid; yet you can use it as flixable gallary plugin.
+This is a free contemporary multi-purpose responsive plugin with very easy control and display flow that gives website owners the capability to professionally & elegantly promote & represent their long job achievements in a unified good looking portfolio grid; yet you can use it asa flixable gallary plugin.
 
 First, all you have to do is adding as much portfolio posts as you want in the new dashboard admin menu "Portfolio" along with giving a good looking featured image to each post, so it can be presented inside the portfolio grid as per your taste.
 
@@ -207,6 +207,10 @@ Notice: By the default the dark theme is enabled.
 * Control description character length
 * Switch between hyperlink or modal window redirection whenever your click over a specific portfolio item
 
+= 1.2.1 =
+
+* Fixed css styles to enhance responsiveness
+
 == Upgrade Notice ==
 
 = 1.0.2 =
@@ -259,8 +263,13 @@ New Features:
 * Control description character length
 * Switch between hyperlink or modal window redirection whenever your click over a specific portfolio item
 
+= 1.2.1 =
+
+* NOTICE: Total redesign of the plugin. If you want to update to 1.2.1 from <=1.5, you have to recreate portfolio items from the scratch in a new simpler way.
+* Fixed css styles to enhance responsiveness.
+
 == Arbitrary section ==
 
 == Updates ==
 
-* NOTICE: Total redesign of the plugin in (v1.2). If you want to upgrade, you have to recreate portfolio items from the scratch in a new simpler way.
+* NOTICE: Total redesign of the plugin. If you want to update to 1.2.1 from <=1.5, you have to recreate portfolio items from the scratch in a new simpler way.
