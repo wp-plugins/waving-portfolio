@@ -111,11 +111,11 @@ Quick solution for your migration, is to execute these SQL query:
 
 <ol>
 <li>
-UPDATE wp_posts SET post_type='itech_portfolio' WHERE post_type='portfolio';</li>
+`UPDATE wp_posts SET post_type='itech_portfolio' WHERE post_type='portfolio';`</li>
 <li>
-UPDATE wp_term_taxonomy SET taxonomy=’waving_portfolio_category’ WHERE taxonomy='portfolio_category';</li>
+`UPDATE wp_term_taxonomy SET taxonomy=’waving_portfolio_category’ WHERE taxonomy='portfolio_category';`</li>
 <li>
-UPDATE wp_term_taxonomy SET taxonomy='waving_portfolio_tag' WHERE taxonomy='portfolio_tag';</li>
+`UPDATE wp_term_taxonomy SET taxonomy='waving_portfolio_tag' WHERE taxonomy='portfolio_tag';`</li>
 </ol>
 And all should be sorted out.
 
@@ -127,12 +127,12 @@ Thanks for your migration
 
 It is a mix of using categories and tags, so if you need to seperate portfolios, just tag portfolio items with different tag names, for instance:
 
-* Portfolio item#1 -> tag=City
-* Portfolio item#2 -> tag=City
-* Portfolio item#3 -> tag=Countries
-* Portfolio item#4 -> tag=Countries
-* Portfolio item#5 -> tag=Continent
-* Portfolio item#6 -> tag=Continent
+* Portfolio item#1 -> `tag=City`
+* Portfolio item#2 -> `tag=City`
+* Portfolio item#3 -> `tag=Countries`
+* Portfolio item#4 -> `tag=Countries`
+* Portfolio item#5 -> `tag=Continent`
+* Portfolio item#6 -> `tag=Continent`
 
 Now you can have three different portfolios using the following shortcodes:
 
