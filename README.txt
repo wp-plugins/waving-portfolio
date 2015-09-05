@@ -3,7 +3,7 @@ Contributors: aelbuni
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=abdulrhman%2eelbuni%40gmail%2ecom&lc=CA&item_name=Waving%20Portfolio%20%2d%20Donation&item_number=20140790&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: gallary, picture, photo, portfolio, plugin, promote, nice, job, illustrate, photography
 Requires at least: 3.8.1
-Tested up to: 4.2.2
+Tested up to: 4.3
 Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
