@@ -3,7 +3,7 @@ Contributors: aelbuni
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=abdulrhman%2eelbuni%40gmail%2ecom&lc=CA&item_name=Waving%20Portfolio%20%2d%20Donation&item_number=20140790&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: gallary, picture, photo, portfolio, plugin, promote, nice, job, illustrate, photography
 Requires at least: 3.8.1
-Tested up to: 4.1
+Tested up to: 4.3
 Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -209,8 +209,7 @@ Notice: By the default the dark theme is enabled.
 
 = 1.2.1 =
 
-* Fixed the upgrade issue of removing old post, to upgrade from 1.5.1 to >= 1.2.
-* The gallary images still need to be manually updated though.
+* Fixed css styles to enhance responsiveness
 
 == Upgrade Notice ==
 
@@ -266,11 +265,11 @@ New Features:
 
 = 1.2.1 =
 
-* Fixed the upgrade issue of removing old post, to upgrade from 1.5.1 to >= 1.2.
-* The gallary images still need to be manually updated though.
+* NOTICE: Total redesign of the plugin. If you want to update to 1.2.1 from <=1.5, you have to recreate portfolio items from the scratch in a new simpler way.
+* Fixed css styles to enhance responsiveness.
 
 == Arbitrary section ==
 
 == Updates ==
 
-* NOTICE: Total redesign of the plugin in (v1.2). If you want to upgrade, you have to recreate portfolio items from the scratch in a new simpler way.
+* NOTICE: Total redesign of the plugin. If you want to update to 1.2.1 from <=1.5, you have to recreate portfolio items from the scratch in a new simpler way.
