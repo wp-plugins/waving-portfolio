@@ -131,8 +131,9 @@ class Waving_Portfolio_Plugin
 
           // Loading lightbox effect script
           wp_enqueue_script(
-          'lightbox-script',
-          plugins_url( 'assets/js/jquery.lightbox.js' , __FILE__ )
+          'waving-portfolio-lightbox-script',
+          plugins_url( 'assets/js/jquery.lightbox.js' , __FILE__ ),
+                  array( 'jquery' )
       );
 
           wp_enqueue_style( 'waving-default',
