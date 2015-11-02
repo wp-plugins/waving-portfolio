@@ -1,0 +1,15 @@
+/* 
+    Document   : closify-admin
+    Created on : Oct 28, 2014, 2:48:51 AM
+    Author     : aelbuni
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+i.mce-i-waving:before {
+    content: "\f526";
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 16px/1 'dashicons';
+    vertical-align: top;
+}
