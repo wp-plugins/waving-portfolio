@@ -30,7 +30,6 @@ So to sum-up, (Waving Portfolio) is using tags to filter Portfolio item list fro
 
 Finally! After finish adding all of your portfolio items (posts) from (Menu -> Portfolio), you can use the wordpress editor plugin (Waving Portfolio Plugin) to generate a flexible custom portfolio lists.
 
-==============================
 <h3>Extra: Shortocde definition:</h3>
 
 For placing your portfolio grid anywhere in your website, just use the following shortcode and you are done:
